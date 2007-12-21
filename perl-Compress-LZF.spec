@@ -12,6 +12,7 @@ Group:		Development/Perl
 Source0:	http://search.cpan.org/CPAN/modules/by-module/Compress/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 LZF is an extremely fast (not that much slower than a pure memcpy) compression
