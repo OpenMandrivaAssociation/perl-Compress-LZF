@@ -1,16 +1,16 @@
 %define	module	Compress-LZF
 %define	name	perl-%{module}
-%define	version	3.41
+%define	version	3.43
 %define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Summary:	Compress::LZF - extremely light-weight Lempel-Ziv-Free compression
+Summary:	Extremely light-weight Lempel-Ziv-Free compression
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/modules/by-module/Compress/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
+Source:	    http://search.cpan.org/CPAN/modules/by-module/Compress/%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
