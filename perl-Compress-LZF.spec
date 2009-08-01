@@ -1,18 +1,18 @@
-%define	module	Compress-LZF
-%define	name	perl-%{module}
-%define	version	3.43
-%define	release	%mkrel 1
+%define	upstream_name	 Compress-LZF
+%define	upstream_version 3.43
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Extremely light-weight Lempel-Ziv-Free compression
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:	    http://search.cpan.org/CPAN/modules/by-module/Compress/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://search.cpan.org/CPAN/modules/by-module/Compress/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 LZF is an extremely fast (not that much slower than a pure memcpy) compression
@@ -26,7 +26,7 @@ commercial programs.
 but at the moment it is believed that it is free from any patents."
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -48,6 +48,3 @@ rm -rf %{buildroot}
 %{_mandir}/*/*
 %{perl_vendorarch}/Compress
 %{perl_vendorarch}/auto/Compress
-
-
-
