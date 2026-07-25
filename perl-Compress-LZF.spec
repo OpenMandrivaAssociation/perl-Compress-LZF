@@ -1,15 +1,15 @@
 %define	upstream_name	 Compress-LZF
-%define	upstream_version 3.43
+%define	upstream_version 3.8
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	Extremely light-weight Lempel-Ziv-Free compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:    http://search.cpan.org/CPAN/modules/by-module/Compress/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Compress-LZF
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Compress-LZF-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
