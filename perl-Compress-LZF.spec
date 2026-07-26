@@ -1,15 +1,13 @@
 %define	upstream_name	 Compress-LZF
-%define	upstream_version 3.8
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    3.8
+Release:	2
 
 Summary:	Extremely light-weight Lempel-Ziv-Free compression
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Compress-LZF
-Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Compress-LZF-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Compress-LZF-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -27,7 +25,7 @@ commercial programs.
 but at the moment it is believed that it is free from any patents."
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -66,9 +64,7 @@ rm -rf %{buildroot}
 
 * Sat Aug 01 2009 Jérôme Quelin <jquelin@mandriva.org> 3.430.0-1mdv2010.0
 + Revision: 406890
-- rebuild using %%perl_convert_version
-
-* Mon Dec 29 2008 Guillaume Rousse <guillomovitch@mandriva.org> 3.43-1mdv2009.1
+- rebuild using %3.8 Mon Dec 29 2008 Guillaume Rousse <guillomovitch@mandriva.org> 3.43-1mdv2009.1
 + Revision: 320936
 - new version
 
