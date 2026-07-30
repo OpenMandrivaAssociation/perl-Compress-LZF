@@ -2,7 +2,7 @@
 %define upstream_version 3.8
 Name:       perl-%{upstream_name}
 Version:	3.8
-Release:	2
+Release:	3
 
 Summary:	Extremely light-weight Lempel-Ziv-Free compression
 License:	GPL+ or Artistic
@@ -12,7 +12,6 @@ Source0:	https://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Compress-LZF-3.8.tar
 
 BuildRequires:	make
 BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 LZF is an extremely fast (not that much slower than a pure memcpy) compression
@@ -29,7 +28,7 @@ but at the moment it is believed that it is free from any patents."
 %setup -q -n Compress-LZF-3.8
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
