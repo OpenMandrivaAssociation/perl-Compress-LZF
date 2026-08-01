@@ -2,7 +2,7 @@
 %define upstream_version 3.8
 Name:       perl-%{upstream_name}
 Version:	3.8
-Release:	3
+Release:	4
 
 Summary:	Extremely light-weight Lempel-Ziv-Free compression
 License:	GPL+ or Artistic
@@ -36,6 +36,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 set +e
 %{__make} test
 :  # soft check
+make test || :
 %clean 
 rm -rf %{buildroot}
 
